@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mozgaj.ba</title>
+    <meta charset="utf-8" />
+    <link href="enigma.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="enigma.jpg" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="meni">
+            <ul>
+                <li><a href="index.html"><font size="4">Početna</font></a></li>
+                <li><a href="zagonetke.html"><font size="4">Zagonetke</font></a></li>
+                <li><a href="krizaljke.html"><font size="4">Križaljke</font></a></li>
+                <li><a href="trikovi.html"><font size="4">Trikovi</font></a></li>
+                <li>
+                    <a target="_blank" href="bla2.html"><font size="4">Kvizovi</font></a>
+                    <ul>
+                        <li><a href="kvizovi.html">Države i gradovi</a></li>
+                        <li><a href="opciPojmovi.html">Opći pojmovi</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                    </ul>
+                </li>
+                <li><a href="poslovice.html"><font size="4">Poslovice</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Osmosmjerke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Sudoku</font></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <div class="karta">
+        <h1>Želite da nas locirate na mapi, iskoristite formular ispod.</h1>
+        <div class="strel">
+            <img src="Images/strelica.png" />
+        </div>
+    <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+    </script>
+
+
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCT6430jYxR_z8RtLPNGpOgDDzmHlr04YA'></script><div style='overflow:hidden;height:417px;width:520px;'><div id='gmap_canvas' style='height:417px;width:520px;'></div>
+    <style>
+        #gmap_canvas img {
+            max-width: none !important;
+            background: none !important;
+        }
+    </style></div> <a href='http://anfahrtsplanerstellen.com/'>anfahrtsplan in HP einfügen</a>
+    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c39603b5670aef686ac91289cd874c6fb57f965a'></script>
+    <script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(43.85378960000001,18.39064689999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(43.85378960000001,18.39064689999998)});infowindow = new google.maps.InfoWindow({content:'<strong>Enigmatika</strong><br>Zmaja od Bosne 33-35<br>71000 Sarajevo<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    </div>
+</body>
+</html>

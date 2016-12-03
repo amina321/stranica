@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mozgaj.ba</title>
+    <meta charset="utf-8" />
+    <link href="enigma.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="enigma.jpg" />
+
+<script language="JavaScript">
+var pitanja = 10;
+var odgovoriPoPitanju = 3;
+var answer = new Array(10);
+
+answer[0] = "Kolijevka";
+answer[1] = "Visina";
+answer[2] = "Steven";
+answer[3] = "Bajkalsko";
+answer[4] = "Rene";
+answer[5] = "1914";
+answer[6] = "Indonezija";
+answer[7] = "Yuri";
+answer[8] = "5";
+answer[9] = "Inka";
+
+function getScore(form){
+    var score = 0;
+    var trenutni;
+    var trenutniIzbor;
+    for(i = 0; i<pitanja; i++){
+        trenutni = i*odgovoriPoPitanju;
+        for(j=0; j<odgovoriPoPitanju; j++){
+            trenutniIzbor = form.elements[trenutni + j];
+            if(trenutniIzbor.checked){
+                if(trenutniIzbor.value == answer[i]){
+                    score++;
+                    break;
+                }
+            }
+        }
+    }
+    
+    form.percentage.value = score + " od " + pitanja;
+    var tacanOdgovor = "";
+    for(i=1; i<= pitanja; i++){
+        tacanOdgovor += i + ". " + answer[i-1] + "\r\n";
+    }
+    form.solution.value = tacanOdgovor;
+}
+</script> --> 
+
+</head>
+<body>
+    <div class="header">
+        <div class="meni">
+            <ul>
+                <li><a href="index.html"><font size="4">Početna</font></a></li>
+                <li><a href="zagonetke.html"><font size="4">Zagonetke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Krizaljke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Trikovi</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Kvizovi</font></a>
+                <ul>
+                    <li><a href="kvizovi.html">Drzave i gradovi</a></li>
+                    <li><a href="opciPojmovi.html">Opci pojmovi</a></li>
+                    <li><a href="sport.html">Sport</a></li>
+                </ul></li>
+                <li><a href="poslovice.html"><font size="4">Poslovice</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Osmosmjerke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Sudoku</font></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="kvizovi">
+<form name="kviz">
+    <br />
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            1. Mezopotamija je poznata kao:
+            <br />
+            <input type="radio" name="1" value="Kolijevka" > Kolijevka civilizacije <br />
+            <input type="radio" name="1" value="staro" > Staro egopatsko carstvo<br/>
+            <input type="radio" name="1" value="crna" > Crna zemlja<br/>
+            
+        </p>
+        </td>
+    
+        <td>
+        <p>
+            2.  Akrofobični ljudi se boje:
+            <br />
+            <input type="radio" name="2" value="pauk" > Pauka <br />
+            <input type="radio" name="2" value="Visina" > Visine<br/>
+            <input type="radio" name="2" value="zmija" > Zmije <br/>
+            <!--<input type="submit" value="Odgovori"><br/>-->
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            3. Ko je režirao film Jurassic Park:
+            <br />
+            <input type="radio" name="3" value="James" > James Cameron <br />
+            <input type="radio" name="3" value="Stanley" > Stanley Kubrick <br/>
+            <input type="radio" name="3" value="Steven" > Steven Spielberg <br/>
+        </p>
+        </td>
+
+        <td>
+        <p>
+            4. Najdublje jezero na svijetu je:
+            <br />
+            <input type="radio" name="4" value="Kaspijsko" > Kaspijsko <br />
+            <input type="radio" name="4" value="Bajkalsko" > Bajkalsko<br/>
+            <input type="radio" name="4" value="Titicaca" > Titicaca <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+    
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            5. "Mislim,dakle postojim" je rekao:
+            <br />
+            <input type="radio" name="5" value="Rene" > Rene Descartes <br />
+            <input type="radio" name="5" value="Sokrat" > Sokrat<br/>
+            <input type="radio" name="5" value="Nikola" > Nikola Tesla<br />
+        </p>
+        </td>
+
+        <td>
+        <p>
+            6. Koje godine je poceo Prvi svjetski rat?
+            <br />
+            <input type="radio" name="6" value="1912" > 1912. <br />
+            <input type="radio" name="6" value="1918" > 1918.<br/>
+            <input type="radio" name="6" value="1914" > 1914. <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            7. U kojoj zemlji ima najviše vulkana?
+            <br />
+            <input type="radio" name="7" value="Indonezija" > Indonezija <br />
+            <input type="radio" name="7" value="Filipini" > Filipini<br/>
+            <input type="radio" name="7" value="Japan" > Japan <br/>
+        </p>
+        </td>
+
+        <td>
+        <p>
+            8. Ko je bio prvi čovjek u Svemiru?
+            <br />
+            <input type="radio" name="8" value="Niel" > Niel Armstrong <br />
+            <input type="radio" name="8" value="Yuri" > Yuri Gagarin<br/>
+            <input type="radio" name="8" value="Buz" > Buz Aldrin <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+        <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            9. Logo Olimpijskih igara ima:
+            <br />
+            <input type="radio" name="9" value="6" > 6 krugova <br />
+            <input type="radio" name="9" value="5" > 5 krugova<br/>
+            <input type="radio" name="9" value="4" > 4 kruga <br/>
+        </p>
+        </td>
+
+        <td>
+        <p>
+            10. Maccu Picchu je sveti grad
+            <br />
+            <input type="radio" name="10" value="Maya" > Maya <br />
+            <input type="radio" name="10" value="Inka" > Inka<br/>
+            <input type="radio" name="10" value="Azteca" > Azteca <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+
+<input type="button" value="Pokaži rezultate" onClick="getScore(this.form)">
+<p> <font color="white">Rezultat = </font><strong><input class="kvizovi" type="text" size="30" name="percentage" disabled></strong><br>&nbsp;<p>
+</form>
+
+
+</div>
+</body>
+</html>

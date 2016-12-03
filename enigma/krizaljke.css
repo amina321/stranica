@@ -1,0 +1,45 @@
+#wrapper {
+  border: 1px solid white;
+  /*width: 450px;
+  height: 450px;*/
+    width: 870px;
+    height: 870px;;
+  margin: 0 auto;
+}
+
+div {
+  contentEditable: true;  
+}
+
+.filled {
+  /*width: 28px;
+  height: 28px;*/
+  width: 56px;
+  height: 56px;
+  background: #FFC90A;
+  border: 1px solid white;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.empty {
+  /*width: 28px;
+  height: 28px;*/
+  width: 56px;
+  height: 56px;
+  border: 1px solid white;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.numbered {
+  counter-increment: value;
+}
+
+.numbered:nth-of-type(n)::before {
+  content: counter(value);
+  font-size: 10px;
+  position: absolute;
+}

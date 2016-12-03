@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mozgaj.ba</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="enigma.jpg" />
+    <link href="onama.css" rel="stylesheet" type="text/css" />
+    <script src="onama.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="meni">
+            <ul>
+                <li><a href="index.html"><font size="4">Početna</font></a></li>
+                <li><a  href="prijavise.html"><font size="4">Prijavi se</font></a></li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="onama">
+            <table border="1">
+                <tr>
+                    <td width=50%>
+                        <h1><b>Enigmatika - Gimnastika uma</b></h1>
+                        <p font style="padding:2%">
+                            Ljudi su uvijek voljeli sastavljati i rješavati zagonetke. Sve zagonetke od pitalica i labirinta, anagrama, logičko matematičkih zagonetki te križaljki, utjelovljuju dva elementa: skrivanje i otkrivanje. Zato je enigmatika za mnoge zabava i ugodna razbibriga. Pored toga što je enigmatika "gimnastika uma i igrarija duha", enigmatika služi za provjeru, sticanje i obnavljanje znanja ("Znanje kroz razonodu"), testiranje inteligencije, a postoji i dokazi da se rješavanjem treniraju moždane vijuge i tako djeluje preventivno na aktivnost mozga.
+                        </p>
+                        <p font style="padding:3%">
+                            Ako ste daleko od kuće (ali i u zemlji!), a volite ukrštenice i druge enigmatske vrste, kao i logičke zadatke, sada možete, u 2-3 klika, naručiti i na svoj mail dobiti fajl sa prvim elektronskim izdanjem jednog enigmatskog časopisa.
+
+                            U prodaji su 1. i 2. broj, prvog enigmatskog internet časopisa, ENIGMATIKA i druge zavrzlame! 52 strane enigmatike i logičkih zadataka, u elektronskom obliku, tako da ih možete odštampati i rješavati na papiru. Ovdje možete naručiti svaki broj pojedinačno, ili oba broja zajedno, po sniženoj cijeni. Kupovina je vrlo jednostavna, preko servisa <a href="https://www.paypal.com/signup/account" target="_blank">PayPal</a>.
+
+                            Ukoliko ste zainteresovani za štampanje enigmatskog časopisa sa sličnim sadržajem, ili želite bilo kakve dodatne informacije, možete pisati na poznatu adresu <a href="mailto:mozgaj@gmail.com" target="_blank">mozgaj@gmail.com</a>.
+                        </p>                   
+                    </td>
+
+                    <td>
+                        <div class="registracija">
+                            <h1>Forma za registraciju</h1>
+                            <p>Koristite tipku tab za kretanje iz jednog polja za usnos u drugo.</p>
+                            <form name='registration' onSubmit="return formValidation();">
+                                <ul>
+                                    <li><label for="userid">Korisnički ID:</label></li>
+                                    <li><input type="text" name="userid" size="12" /></li>
+                                    <li><label for="passid">Password:</label></li>
+                                    <li><input type="password" name="passid" size="12" /></li>
+                                    <li><label for="username">Ime:</label></li>
+                                    <li><input type="text" name="username" size="50" /></li>
+
+                                    <li><label for="surname">Prezime:</label></li>
+                                    <li><input type="text" name="surname" size="50" /></li>
+
+                                    <li><label for="address">Adesa:</label></li>
+                                    <li><input type="text" name="address" size="50" /></li>
+                                    <li><label for="country">Država:</label></li>
+                                    <li>
+                                        <select name="country">
+                                            <option selected="" value="Default">(Izaberite državu)</option>
+                                            <option value="AF">Australia</option>
+                                            <option value="AL">Canada</option>
+                                            <option value="DZ">India</option>
+                                            <option value="AS">Russia</option>
+                                            <option value="AD">USA</option>
+                                            <option value="BIH">Bosna i Hercegovina</option>
+                                            <option value="SRB">Srbija</option>
+                                            <option value="HR">Hrvatska</option>
+                                        </select>
+                                    </li>
+                                    <li><label for="zip">ZIP Kod:</label></li>
+                                    <li><input type="text" name="zip" /></li>
+                                    <li><label for="email">Email:</label></li>
+                                    <li><input type="text" name="email" size="50" pattern="[^ @]*@[^ @]*" /></li>
+                                    <li><label id="gender">Spol:</label></li>
+                                    <li><input type="radio" name="msex" value="Muški" /><span>Muški</span></li>
+                                    <li><input type="radio" name="fsex" value="Ženski" /><span>Ženski</span></li>
+                                    <li><label for="desc">About:</label></li>
+                                    <li><textarea name="desc" id="desc"></textarea></li>
+                                    <li><input type="submit" name="submit" value="Pošalji" /></li>
+                                </ul>
+                            </form>
+                        </div>
+                     
+                    </td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

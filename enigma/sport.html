@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mozgaj.ba</title>
+    <meta charset="utf-8" />
+    <link href="enigma.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="enigma.jpg" />
+
+<script language="JavaScript">
+var pitanja = 8;
+var odgovoriPoPitanju = 3;
+var answer = new Array(8);
+
+answer[0] = "Bayern";
+answer[1] = "Njemačka";
+answer[2] = "Sergio";
+answer[3] = "Jose";
+answer[4] = "Rio";
+answer[5] = "2008";
+answer[6] = "Danska";
+answer[7] = "Andy";
+
+function getScore(form){
+    var score = 0;
+    var trenutni;
+    var trenutniIzbor;
+    for(i = 0; i<pitanja; i++){
+        trenutni = i*odgovoriPoPitanju;
+        for(j=0; j<odgovoriPoPitanju; j++){
+            trenutniIzbor = form.elements[trenutni + j];
+            if(trenutniIzbor.checked){
+                if(trenutniIzbor.value == answer[i]){
+                    score++;
+                    break;
+                }
+            }
+        }
+    }
+    
+    form.percentage.value = score + " od " + pitanja;
+    var tacanOdgovor = "";
+    for(i=1; i<= pitanja; i++){
+        tacanOdgovor += i + ". " + answer[i-1] + "\r\n";
+    }
+    form.solution.value = tacanOdgovor;
+}
+</script> --> 
+
+</head>
+<body>
+    <div class="header">
+        <div class="meni">
+            <ul>
+                <li><a href="index.html"><font size="4">Početna</font></a></li>
+                <li><a href="zagonetke.html"><font size="4">Zagonetke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Krizaljke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Trikovi</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Kvizovi</font></a>
+                <ul>
+                    <li><a href="kvizovi.html">Države i gradovi</a></li>
+                    <li><a href="opciPojmovi.html">Opći pojmovi</a></li>
+                    <li><a href="sport.html">Sport</a></li>
+                </ul></li>
+                <li><a href="poslovice.html"><font size="4">Poslovice</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Osmosmjerke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Sudoku</font></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="kvizovi">
+    <form name="kviz">
+    <br />
+    <br />
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            1. Stadion Allianz arena je stadion:
+            <br />
+            <input type="radio" name="1" value="Hertha" > Herthe<br />
+            <input type="radio" name="1" value="Bayern" > Bayerna<br/>
+            <input type="radio" name="1" value="Nurnberg" > Nurnberga<br/>
+            
+        </p>
+        </td>
+    
+        <td>
+        <p>
+            2. Pobjednik Svjetskog prvenstva 2014. u Brazilu je:
+            <br />
+            <input type="radio" name="2" value="Njemačka" > Njemačka <br />
+            <input type="radio" name="2" value="Brazil" > Brazil<br/>
+            <input type="radio" name="2" value="Argentina" > Argentina <br/>
+            <!--<input type="submit" value="Odgovori"><br/>-->
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            <img src="ramos.jpg" width="270" height="160">
+        </p>
+        </td>
+
+        <td>
+        <p>
+            3. Igrač na fotografiji je:
+            <br />
+            <input type="radio" name="4" value="Aguero" > Sergio Aguero <br />
+            <input type="radio" name="4" value="Sergio" > Sergio Ramos<br/>
+            <input type="radio" name="4" value="James" > James Rodriguez <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+    
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+           <img src="jose.jpg" width="270" height="160">
+        </p>
+        </td>
+
+        <td>
+        <p>
+            4. Trener Manchester Uniteda na fotografiji je:
+            <br />
+            <input type="radio" name="6" value="Louis" > Louis van Gaal <br />
+            <input type="radio" name="6" value="Alex" > Alex Ferguson<br/>
+            <input type="radio" name="6" value="Jose" > Jose Mourinho <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            5. Olompijske igre 2016. održane su u:
+            <br />
+            <input type="radio" name="7" value="London" > Londonu <br />
+            <input type="radio" name="7" value="Rio" > Rio de Janeiru<br/>
+            <input type="radio" name="7" value="Japan" > Pekingu <br/>
+        </p>
+        </td>
+
+        <td>
+        <p>
+            6. Koje godine je bilo Evropsko nogometno prvenstvo u Austriji i Švicarskoj?
+            <br />
+            <input type="radio" name="8" value="2012" > 2012. <br />
+            <input type="radio" name="8" value="2008" > 2008.<br/>
+            <input type="radio" name="8" value="2010" > 2010. <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+        <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="50%">
+        <p>
+            7. Ko je osvojio zlatnu medalju u rukometu na OI u Brazilu?
+            <br />
+            <input type="radio" name="9" value="Danska" > Danska <br />
+            <input type="radio" name="9" value="Poljaska" > Poljska<br/>
+            <input type="radio" name="9" value="Francuska" > Francuska <br/>
+        </p>
+        </td>
+
+        <td>
+        <p>
+            8. Ko je osvojio Wimbledon 2016. godine?
+            <br />
+            <input type="radio" name="10" value="Andy" > Andy Murray <br />
+            <input type="radio" name="10" value="Novak" > Novak Đoković<br/>
+            <input type="radio" name="10" value="Roger" > Roger Federer <br/>
+        </p>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+
+<input type="button" value="Pokaži rezultate" onClick="getScore(this.form)">
+<p> <font color="white">Rezultat = </font><strong><input class="kvizovi" type="text" size="30" name="percentage" disabled></strong><br>&nbsp;<p>
+</form>
+
+
+</div>
+</body>
+</html>

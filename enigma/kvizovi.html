@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mozgaj.ba</title>
+    <meta charset="utf-8" />
+    <link href="enigma.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="enigma.jpg" />
+
+<script language="JavaScript">
+var pitanja = 9;
+var odgovoriPoPitanju = 3;
+var answer = new Array(9);
+
+answer[0] = "Varšava";
+answer[1] = "Švicarska";
+answer[2] = "Rumunija";
+answer[3] = "Njemačka";
+answer[4] = "crvena";
+answer[5] = "Partenon";
+answer[6] = "Vatikan";
+answer[7] = "London";
+answer[8] = "Javor";
+
+function getScore(form){
+    var score = 0;
+    var trenutni;
+    var trenutniIzbor;
+    for(i = 0; i<pitanja; i++){
+        trenutni = i*odgovoriPoPitanju;
+        for(j=0; j<odgovoriPoPitanju; j++){
+            trenutniIzbor = form.elements[trenutni + j];
+            if(trenutniIzbor.checked){
+                if(trenutniIzbor.value == answer[i]){
+                    score++;
+                    break;
+                }
+            }
+        }
+    }
+    
+    form.percentage.value = score + " od " + pitanja;
+    var tacanOdgovor = "";
+    for(i=1; i<= pitanja; i++){
+        tacanOdgovor += i + ". " + answer[i-1] + "\r\n";
+    }
+    form.solution.value = tacanOdgovor;
+}
+
+</script> --> 
+
+</head>
+<body>
+    <div class="header">
+        <div class="meni">
+            <ul>
+                <li><a href="enigma.html"><font size="4">Početna</font></a></li>
+                <li><a href="zagonetke.html"><font size="4">Zagonetke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Krizaljke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Trikovi</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Kvizovi</font></a>
+                <ul>
+                    <li><a href="kvizovi.html">Drzave i gradovi</a></li>
+                    <li><a href="opciPojmovi.html">Opci pojmovi</a></li>
+                    <li><a href="sport.html">Sport</a></li>
+                </ul></li>
+                <li><a href="poslovice.html"><font size="4">Poslovice</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Osmosmjerke</font></a></li>
+                <li><a target="_blank" href="bla2.html"><font size="4">Sudoku</font></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="kvizovi">
+<form name="kviz">
+    <br />
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="35%">
+        <p>
+            1. Glavni grad Poljske je:
+            <br />
+            <input type="radio" name="1" value="Varšava" > Varšava <br />
+            <input type="radio" name="1" value="Prag" > Prag<br/>
+            <input type="radio" name="1" value="Bratislava" > Bratislava <br/>
+            
+        </p>
+        </td>
+    
+        <td width="35%">
+        <p>
+            2.  Bern je glavni grad:
+            <br />
+            <input type="radio" name="2" value="Islanda" > Islanda <br />
+            <input type="radio" name="2" value="Švicarska" > Švicarske<br/>
+            <input type="radio" name="2" value="Belgija" > Belgije <br/>
+            <!--<input type="submit" value="Odgovori"><br/>-->
+        </p>
+        </td>
+
+        <td>
+            <p>
+               3. Bukurešt je glavni grad:
+            <br />
+            <input type="radio" name="3" value="Rumunija" > Rumunije <br />
+            <input type="radio" name="3" value="Bugarska" > Bugarske<br/>
+            <input type="radio" name="3" value="Bjelorusija" > Bjelorusije <br/>
+            </p>
+        </td>
+
+        </tr>
+        </table>
+        </div>
+        
+
+    <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="35%">
+        <p>
+            4. Brandenburška kapija se<br/> nalazi u:
+            <br />
+            <input type="radio" name="4" value="Danska" > Danskoj <br />
+            <input type="radio" name="4" value="Njemačka" > Njemačkoj<br/>
+            <input type="radio" name="4" value="Norveška" > Norveškoj <br/>
+        </p>
+        </td>
+    
+        <td width="35%">
+        <p>
+            5. Koje boje sadrži zastava Belgije:
+            <br />
+            <input type="radio" name="5" value="crna" > crna, bijela, crvena <br />
+            <input type="radio" name="5" value="plava" > plava, bijela, zelena<br/>
+            <input type="radio" name="5" value="crvena" > crna, žuta, crvena <br />
+        </p>
+        </td>
+
+        <td>
+            <p>
+               6. Poznati hram u Grčkoj je:
+            <br />
+            <input type="radio" name="6" value="Partenon" > Partenon <br />
+            <input type="radio" name="6" value="Panteon" > Panteon<br/>
+            <input type="radio" name="6" value="Amada" > Amada <br/>
+            </p>
+        </td>
+
+        </tr>
+        </table>
+        </div>
+
+        <br />
+        <div class="podloga3"> 
+        <table border="1" width="100%">
+        <tr>
+        <td width="35%">
+        <p>
+            7. Najmanja država svijeta je:
+            <br />
+            <input type="radio" name="7" value="Monako" > Monako <br />
+            <input type="radio" name="7" value="Vatikan" > Vatikan<br/>
+            <input type="radio" name="7" value="San" > San Marino <br/>
+        </p>
+        </td>
+    
+        <td width="35%">
+        <p>
+            8. Rijeka Temza protiče kroz:
+            <br />
+            <input type="radio" name="8" value="Pariz" > Pariz <br />
+            <input type="radio" name="8" value="Madrid" > Madrid<br/>
+            <input type="radio" name="8" value="London" > London <br />
+        </p>
+        </td>
+
+        <td>
+            <p>
+               9. Simbol Kanade je:
+            <br />
+            <input type="radio" name="9" value="Javor" > Javorov list <br />
+            <input type="radio" name="9" value="Lovor" > Lovorov list<br/>
+            <input type="radio" name="9" value="Bršljan" > Bršljanov list <br/>
+            </p>
+        </td>
+
+        </tr>
+        </table>
+        </div>
+
+
+<input type="button" value="Pokaži rezultate" onClick="getScore(this.form)">
+<p> <font color="white">Rezultat = </font><strong><input class="kvizovi" type="text" size="30" name="percentage" disabled></strong><br>&nbsp;<p>
+</form>
+
+
+</div>
+</body>
+</html>
